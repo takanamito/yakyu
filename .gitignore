@@ -1,3 +1,6 @@
+dockerfiles/mysql-storage/data
+
+
 *.gem
 *.rbc
 /.config
