@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql-storage:
+    image: takanamito/mysql-storage:latest
+    volumes:
+      - /var/lib/mysql
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3307:3306
+    volumes_from:
+      - mysql-storage
