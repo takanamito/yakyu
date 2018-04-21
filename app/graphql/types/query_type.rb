@@ -1,7 +1,7 @@
 Types::QueryType = GraphQL::ObjectType.define do
   name 'Query'
 
-  field :games_wide, !Types::GamesWideType, field: Fields::GamesWide.build
+  field :games_wide, !types[Types::GamesWideType], field: Fields::GamesWide.build
 
   field :pitch_type_count, !Types::Pitch::CountByPitchType do
     argument :pitcher_first_name, !types.String
