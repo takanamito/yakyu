@@ -1,4 +1,9 @@
-dockerfiles/mysql-storage/data
+dockerfiles/mysql-storage/data/*
+!dockerfiles/mysql-storage/data/var
+dockerfiles/mysql-storage/data/var/*
+!dockerfiles/mysql-storage/data/var/lib
+dockerfiles/mysql-storage/data/var/lib/*
+!dockerfiles/mysql-storage/data/var/lib/.gitkeep
 
 # Created by https://www.gitignore.io/api/rails
 
