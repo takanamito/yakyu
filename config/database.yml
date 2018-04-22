@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  port: 3307
+  host: db
   database: yakyu_development
 
 # Warning: The database defined as "test" will be erased and
