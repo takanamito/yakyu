@@ -21,3 +21,16 @@ $ cd /path/to/yakyu
 $ docker-compose up -d # 起動
 $ docker-compose down # 停止
 ```
+
+### 既存のコンテナとイメージの削除
+
+```
+# コンテナの削除
+$ docker rm -f $(docker ps -aq)
+
+# イメージの削除
+$ docker rmi -f $(docker images -q)
+
+# ボリュームの削除
+$ docker volume rm -f $(docker volume ls -q)
+```
