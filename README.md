@@ -1,6 +1,9 @@
 # yakyu
 野球ビッグデータでなんかする。GraphQLとか使う。
 
+メジャー リーグ ベースボール データ  |  BigQuery  |  Google Cloud
+https://cloud.google.com/bigquery/public-data/baseball?hl=ja
+
 ## 環境構築
 
 ### ミドルウェアの起動
