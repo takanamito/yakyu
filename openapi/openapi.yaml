@@ -28,13 +28,11 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PitcherCountTypes'
+                type: array
+                items:
+                  $ref: '#/components/schemas/PitcherCountType'
 components:
   schemas:
-    PitcherCountTypes:
-      type: array
-      items:
-        $ref: '#/components/schemas/PitcherCountType'
     PitcherCountType:
       required:
         - pitch_type
