@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: yakyu API
+  license:
+    name: MIT
+paths:
+  /pitch_type_count:
+    get:
+      summary: pitch counts by pitch types
+      operationId: pitchCountsByPitchTypes
+      parameters:
+        - name: pitcher_first_name
+          in: query
+          description: Pitcher first name ex. Masahiro
+          required: false
+          schema:
+            type: string
+        - name: pitcher_last_name
+          in: query
+          description: Pitcher last name ex. Tanaka
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: valid response which includes counts by pitch type
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PitcherCountType'
+components:
+  schemas:
+    PitcherCountType:
+      required:
+        - pitch_type
+        - count
+      properties:
+        pitch_type:
+          type: string
+        count:
+          type: integer
+          format: int64
